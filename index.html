@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>3264</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="3264.ico">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="3264 game"/>
+  <meta property="og:site_name" content="3264 game"/>
+  <meta property="og:description" content="Join the numbers and get to the 3264 tile! Careful: this game is extremely addictive!"/>
+  <meta property="og:image" content= url'./tile-sets/3264.png'/>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">Welcome to the Nation! Enjoy this game of 3264</h1>
+    </div>
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>3264 tile! This game is brought to you by the Robotics team N.E.R.D. Nation #3264</strong> Visit our team's Facebook page: <a href="https://www.facebook.com/nerdnation3264/" target="_blank">here!</a></p>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+	  <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going!</a>
+          <a class="retry-button">Start over</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong> To step from 48, you must combine it with a 3!
+    </p>
+    <hr>
+    <p>
+      Created by <a href="https://zmcguckin.com" target="_blank">Zach McGuckin</a>. Based on 2048.
+    </p>
+    <hr>
+    <p>
+    <strong class="important">Note:</strong> This site is the official version of 3264.
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
