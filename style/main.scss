@@ -274,20 +274,6 @@ hr {
       margin-top: 29px;
     }
 
-    .mailing-list {
-      margin-top: 52px;
-
-      strong {
-        display: block;
-        margin-bottom: 10px;
-      }
-
-      .mailing-list-email-field {
-        width: 230px;
-        margin-right: 5px;
-      }
-    }
-
     a {
       @include button;
       margin-left: 9px;
@@ -296,12 +282,6 @@ hr {
       &.keep-playing-button {
         display: none;
       }
-    }
-
-    .score-sharing {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px;
     }
 
     @include animation(fade-in 800ms ease $transition-speed * 12);
@@ -417,19 +397,6 @@ hr {
   $exponent: 1;
   $limit: 11;
 
-  // Colors for all 11 states, false = no special color
-  $special-colors: false false, // 2
-                   false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
-
   // Build tile colors
   @while $exponent <= $limit {
     $power: pow($base, $exponent);
@@ -483,7 +450,7 @@ hr {
     $exponent: $exponent + 1;
   }
 
-  // Super tiles (above 2048)
+  // Super tiles (above 3264)
   &.tile-super .tile-inner {
     color: $bright-text-color;
     background: mix(#333, $tile-gold-color, 95%);
@@ -647,22 +614,6 @@ hr {
 
     &.game-over .mailing-list {
       margin-top: 25px;
-    }
-
-    .mailing-list {
-      margin-top: 10px;
-
-      .mailing-list-email-field {
-        width: 180px;
-      }
-    }
-  }
-
-  .sharing {
-    > iframe, > span, > form {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 20px;
     }
   }
 }

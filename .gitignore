@@ -65,3 +65,4 @@ node_modules/
 .env
 .firebaserc
 firebase.json
+.DS_Store

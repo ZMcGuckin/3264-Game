@@ -3,7 +3,6 @@ function HTMLActuator() {
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
-  this.sharingContainer = document.querySelector(".score-sharing");
 
   this.score = 0;
 }
@@ -38,10 +37,6 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
 // Continues the game (both restart and keep playing)
 HTMLActuator.prototype.continueGame = function () {
-  if (typeof ga !== "undefined") {
-    ga("send", "event", "game", "restart");
-  }
-
   this.clearMessage();
 };
 
@@ -133,12 +128,10 @@ HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
   var message = won ? "You win!" : "Game over!";
 
-  if (typeof ga !== "undefined") {
-    ga("send", "event", "game", "end", type, this.score);
-  }
-
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+
+  console.log(this.score);
 
   this.clearContainer(this.sharingContainer);
 };
